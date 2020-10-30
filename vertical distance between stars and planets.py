@@ -23,6 +23,8 @@ C_p2=sp.Symbol('C_p1')
 C_p1,C_p2=sp.solveset((x_b)**2-(P_p**2)*((np.sin(omega_p))**2)+2*x_b*(e_p*x_b-P_p*np.cos(omega_p))*C_p+((P_p**2)*((np.sin(omega_p))**2)+(e_p*x_b-P_p*np.cos(omega_p))**2)*(C_p**2), C_p)
 
 F=(P_p**2)/((1+e_p*C_p1)**2)
-
 dist=np.abs(OMEGA_p*x_b+deltai_p*sp.sqrt(F-(x_b)**2)-deltai_b*sp.sqrt(F-(x_b)**2))
-print('dist=',dist)
+print('dist1=',dist)
+F=(P_p**2)/((1+e_p*C_p2)**2)
+dist=np.abs(OMEGA_p*x_b+deltai_p*sp.sqrt(F-(x_b)**2)-deltai_b*sp.sqrt(F-(x_b)**2))
+print('dist2=',dist)
