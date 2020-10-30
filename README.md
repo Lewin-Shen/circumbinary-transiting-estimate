@@ -10,5 +10,5 @@ and this will yield the distance bwteen the star and the planet in the x-y plane
 notice, when a transit happen, we could roughly estimate that x_b=x_p (where star's coordinate in x axis  is equal to planet's coordinate in x axis ) and this is where the legitimacy of the code came. and also notice this code use the Approximation of the following of orbital elements (which is true for most of the binary star systems)
 * the Argument of periapsis(small omega) for both star and planet is small 
 * inclination for both stars and planet are close to  90 deg
-* the Longitude of the ascending node(big omega) of the binary star equals zero (you can assign it to be equal to zero by choosing a suitable coordinate)
+* the Longitude of the ascending node(big omega) of the binary star equals zero (you can assign it to be zero by choosing a proper coordinate system)
 * the Longitude of the ascending node(big omega) of the planet is small
