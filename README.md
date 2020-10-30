@@ -2,7 +2,7 @@
 This code estimate the tight transit phenomenon in circumbinary system
 
 
-#Calulating the vertical distance between stars and planets during a transit in a circumbinary system
+# Calulating the vertical distance between stars and planets during a transit in a circumbinary system
 Since there are two stars in a circumbinary system, we generally consider the transition bewteen the targetd planet and the star you selected.
 This will calculate t the minimum vertical distance between a planet and a star in a circumbinary system; by vertical distance we refer to the distance between planet and star in x-y plane (we observe from the z-direction) and notice if there is no inclination for stars and planet, the distance between planet and star in x-y plane would be zero forever.
 
