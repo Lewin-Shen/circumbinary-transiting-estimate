@@ -1,0 +1,55 @@
+clear;clc
+syms a b x y g h i j k l m n e_p e_b x_b x_p y_b y_b z omega_p omega_b i_p i_b OMEGA_p OMEGA_b
+
+%omega_p = degtorad(263.3)
+%omega_b = degtorad(117.561)
+%OMEGA_p = degtorad(0.87)
+%OMEGA_b = degtorad(0)
+
+omega_p = degtorad(0)
+omega_b = degtorad(0)
+OMEGA_p = degtorad(90)
+OMEGA_b = degtorad(90)
+
+%i_b= degtorad(89.658)
+%i_p= degtorad(89.22)
+i_b= degtorad(90)
+i_p= degtorad(90)
+
+g=cos(OMEGA_p)*cos(omega_p)-sin(OMEGA_p)*sin(omega_p)*cos(i_p)
+h=-cos(OMEGA_p)*sin(omega_p)-sin(OMEGA_p)*cos(omega_p)*cos(i_p)
+i=cos(OMEGA_b)*cos(omega_b)-sin(OMEGA_b)*sin(omega_b)*cos(i_b)
+j=-cos(OMEGA_b)*sin(omega_b)-sin(OMEGA_b)*cos(omega_b)*cos(i_b)
+
+k=OMEGA_p*cos(omega_p)+sin(omega_p)*(pi/2-i_p)
+l=-OMEGA_p*sin(omega_p)+cos(omega_p)*(pi/2-i_p)
+m=OMEGA_b*cos(omega_b)+sin(omega_b)*(pi/2-i_b)
+n=-OMEGA_b*sin(omega_b)+cos(omega_b)*(pi/2-i_b)
+a_p=0.4491
+
+e_p=0.0928
+
+
+a_b=0.1288
+e_b=0.15601
+
+
+a=a_p*(1-e_p^2)
+b=a_b*(1-e_b^2)
+
+
+x=0:pi/10:2*pi
+x_p=(((a)./(1+e_p.*cos(x))).*(cos(x).*g+sin(x).*h))
+x_b=(((b)./(1+e_b.*cos(x))).*(cos(x).*i+sin(x).*j))*((0.2974)/(1.038+0.2974))
+
+y_p=(((a)./(1+e_p.*cos(x))).*(cos(x).*k+sin(x).*l))
+y_b=(((b)./(1+e_b.*cos(x))).*(cos(x).*m+sin(x).*n))*((0.2974)/(1.038+0.2974))
+
+
+
+plot(x_p,y_p)
+hold on;
+plot(x_b,y_b)
+
+
+
